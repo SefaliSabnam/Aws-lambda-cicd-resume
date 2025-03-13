@@ -1,8 +1,9 @@
+
 pipeline {
     agent any
     
     environment {
-        AWS_REGION = 'us-east-1'     // Change to your AWS region
+        AWS_REGION = 'ap-south-1'     // Change to your AWS region
         LAMBDA_FUNCTION_NAME = 'MyLambdaFunction' // Name of your Lambda function
         AWS_ACCESS_KEY_ID = credentials('aws-access-key') // AWS credentials stored in Jenkins
         AWS_SECRET_ACCESS_KEY = credentials('aws-secret-key')
@@ -11,7 +12,7 @@ pipeline {
     stages {
         stage('Checkout Code') {
             steps {
-                git branch: 'main', url: 'https://github.com/YourRepo/YourLambdaCode.git'
+                git branch: 'UA-1234', url: 'https://github.com/SefaliSabnam/Aws-lambda-cicd-resume.git'
             }
         }
         
